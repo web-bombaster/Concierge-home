@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@mixin pix-to-rem($px) {
+    font-size: math.div($px, $font-size-default) * 1rem;
+}
+
+@mixin container {
+	width: 100%;
+	max-width: $container_width;
+	margin: 0 auto;
+	padding: 0 3rem;
+
+	@media screen and (max-width: $break_md) {
+		padding: 0 1.5rem;
+	}
+}
